@@ -47,7 +47,6 @@ const HomeBody = ({ user }) => {
         initialLikedState[id] = true;
       });
       setLikedRecipes(initialLikedState);
-      console.log('Initial liked state:', initialLikedState);
     }
   }, [user]);
 
@@ -68,7 +67,6 @@ const HomeBody = ({ user }) => {
     try {
       setLoading(true);
       const response = await userApiClient.get(`/api/recipes?page=${currentPage}&pageSize=${pageSize}&search=${debouncedSearchQuery}`);
-      console.log("Fetched recipes:", response.data);
       const adaptedRecipes = response.data.recipes.results.map(recipe => ({
         id: recipe.id.toString(),
         name: recipe.title,
