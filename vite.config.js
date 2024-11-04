@@ -3,10 +3,15 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    rollupOptions: {
+      external: ['lodash']
+    }
+  },
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3001', 
+        target: 'http://localhost:3001',
         changeOrigin: true,
         secure: false,
       },
