@@ -3,7 +3,7 @@ import React from 'react';
 const RegisterBody = () => {
 
     const handleGoogleLogin = () =>{
-		window.location.href = "https://recipe-finder-backend-idhn.onrender.com";
+		window.location.href = "https://recipe-finder-backend-idhn.onrender.com/auth";
     }
 
 
