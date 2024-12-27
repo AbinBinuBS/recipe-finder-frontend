@@ -3,7 +3,7 @@ import { store } from "../redux/store";
 import { setTokens, clearTokens } from "../redux/userSlice";
 
 const userApiClient = axios.create({
-	baseURL: "https://recipe-finder-backend-idhn.onrender.com",
+	baseURL: "https://recipe-finder-backend-gm5m.onrender.com",
 	headers: {
 		"Content-Type": "application/json",
 	},
